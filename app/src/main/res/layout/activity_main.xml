@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/migraineStyle1"
+    tools:context="com.example.android.migrainelist.MainActivity"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/thing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/offwhite"
+
+        >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/migraineStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+
+        <EditText
+            android:id="@+id/et_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="1234567890"
+            android:hint="@string/q2"
+            android:imeOptions="actionDone"
+            android:inputType="number" />
+
+
+        <TextView
+            style="@style/migraineStyle"
+            android:id="@+id/q1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q1" />
+
+
+        <RadioGroup style="@style/RadioGroupStyle">
+
+            <RadioButton
+                android:id="@+id/yes_radio_button1"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/no_radio_button1"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/no" />
+
+
+        </RadioGroup>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/q3"
+            style="@style/migraineStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q3" />
+
+        <!-- Question 3-->
+        <RadioGroup style="@style/RadioGroupStyle">
+
+            <RadioButton
+                android:id="@+id/yes_radio_button3"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/no_radio_button3"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            style="@style/migraineStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q4" />
+
+        <CheckBox
+            android:id="@+id/stabbing_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q4stabbing" />
+
+        <CheckBox
+            android:id="@+id/throbbing_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q4throbbing" />
+
+        <CheckBox
+            android:id="@+id/intermittent_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q4intermittent" />
+
+        <CheckBox
+            android:id="@+id/dull_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q4dull" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            style="@style/migraineStyle"
+            android:id="@+id/q5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q5" />
+
+        <RadioGroup style="@style/RadioGroupStyle">
+
+            <RadioButton
+                android:id="@+id/yes_radio_button5"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/no_radio_button5"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            style="@style/migraineStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q6" />
+
+        <CheckBox
+            android:id="@+id/standing_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q6standing" />
+
+        <CheckBox
+            android:id="@+id/coughing_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q6coughing" />
+
+        <CheckBox
+            android:id="@+id/shakinghead_checkBox"
+            style="@style/RadioBtnCheckBxStyle"
+            android:text="@string/q6shakinghead" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            style="@style/migraineStyle"
+            android:id="@+id/q4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q7" />
+
+        <RadioGroup style="@style/RadioGroupStyle">
+
+            <RadioButton
+                android:id="@+id/yes_radio_button7"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/no_radio_button7"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/no" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            style="@style/migraineStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/q8" />
+
+
+        <RadioGroup style="@style/RadioGroupStyle">
+
+            <RadioButton
+                android:id="@+id/rb_q8_a"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/q8ibuprofen" />
+
+            <RadioButton
+                android:id="@+id/rb_q8_b"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/q8coffee" />
+
+            <RadioButton
+                android:id="@+id/rb_q8_c"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/q8headachepowder" />
+
+            <RadioButton
+                android:id="@+id/rb_q8_d"
+                style="@style/RadioBtnCheckBxStyle"
+                android:text="@string/q8nothing" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submit_quiz"
+            style="@style/SubmitButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="submitQuiz"
+            android:text="@string/submitButton" />
+
+    </LinearLayout>
+
+
+</ScrollView>

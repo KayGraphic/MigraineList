@@ -1,0 +1,47 @@
+<resources>
+    <!-- The strings for questions -->
+    <string name="q1">Are you sensitive to smells?</string>
+    <string name="q2">How many drinks last night?</string>
+    <string name="q3">Is the pain located in one, localized spot?</string>
+    <string name="q4">Which of these symptoms describes the headache?</string>
+    <string name="q5">Does a head pull provide temporary relief? </string>
+    <string name="q6">Which of these activities make the pain worse?</string>
+    <string name="q7">Are you nauseated?</string>
+    <string name="q8">How long has your head hurt?</string>
+    <string name="app_name">Migraine List</string>
+    <string name="title">Should you take all of your migraine medicine?</string>
+
+    <!-- The strings for y/n answers -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe">Maybe</string>
+
+    <!-- The strings for multiple choice question 4-->
+    <string name="q4stabbing">Stabbing</string>
+    <string name="q4throbbing">Throbbing</string>
+    <string name="q4intermittent">Intermittent</string>
+    <string name="q4dull">Dull</string>
+
+    <string name="q6shakinghead">Shaking Head</string>
+    <string name="q6standing">Standing up</string>
+    <string name="q6coughing">Coughing</string>
+
+
+    <string name="q8ibuprofen">I woke up like this</string>
+    <string name="q8coffee">3-4 hours</string>
+    <string name="q8headachepowder">1-2</string>
+    <string name="q8nothing">It just started</string>
+
+
+
+    <!-- The strings with the message for each group of test scores -->
+    <string name="level_1_message">Drink a glass of water and rest your eyes:\u0020 </string>
+    <string name="level_2_message">Take an Advil:\u0020 </string>
+    <string name="level_3_message">Take a headache powder and drink some Gatorade:\u0020 </string>
+    <string name="level_4_message">TAKE ALL OF YOUR MIGRAINE MEDICINE NOW!:\u0020 </string>
+    <string name="level_5_message">You have a Hangover and you deserve this:\u0020 </string>
+
+    <!-- The string for submit button-->
+    <string name="submitButton">Submit</string>
+
+</resources>

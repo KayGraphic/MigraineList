@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- App title -->
+    <style name="migraineStyle1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/fourteen_dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/twenty_six_sp</item>
+        <item name="android:background">@color/offwhite</item>
+    </style>
+    <!-- The style for Regular Text-->
+    <style name="migraineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/four_dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/four_dp</item>
+        <item name="android:paddingTop">@dimen/fourteen_dp</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+    </style>
+    <!-- The style for Radio Groups.  -->
+    <style name="RadioGroupStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/eight_dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <!-- The style Radio Button and Check Box. -->
+    <style name="RadioBtnCheckBxStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+
+    </style>
+    <!-- The style App Submit Button. -->
+    <style name="SubmitButtonStyle">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/sixteen_dp</item>
+        <item name="android:onClick">submitQuiz</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
+        <item name="android:textColor">@color/offwhite</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

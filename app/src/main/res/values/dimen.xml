@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Depth Size. -->
+    <dimen name="four_dp">4dp</dimen>
+    <dimen name="eight_dp">8dp</dimen>
+    <dimen name="fourteen_dp">14dp</dimen>
+    <dimen name="sixteen_dp">16dp</dimen>
+    <dimen name="twenty_six_dp">26dp</dimen>
+    <dimen name="thirty_five_dp">35dp</dimen>
+
+
+    <!-- Font or Text Size. -->
+    <dimen name="twelve_sp">12sp</dimen>
+    <dimen name="fourteen_sp">14sp</dimen>
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="twenty_six_sp">26sp</dimen>
+    <dimen name="thirty_two_sp">32sp</dimen>
+
+</resources>
+
