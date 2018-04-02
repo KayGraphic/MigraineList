@@ -4,4 +4,4 @@ I suffer from migraines and often I wake up in the middle of a full-blown migrai
 MEDICAL DISCLAIMER
 This app is for me only, it is a personal app developed for me and me alone. I have arrived at what works for me through years of trial and error. This is not to be used to evaluate a medical condition, I'm not a doctor or any kind of medical professional. 
 
-I was going to develop a quiz about toads called “TaodAll Recall,” but then I had a migraine and was inspired. 
+I was going to develop a quiz about toads called “ToadAll Recall,” but then I had a migraine and was inspired. 
