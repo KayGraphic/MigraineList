@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_editText;
 
     private RadioButton rb_sensitiveYes;
-   // private RadioButton rb_sensitiveNo;
+
     private RadioButton rb_painYes;
-   // private RadioButton rb_painNo;
+
 
     private CheckBox cb_stabbing;
     private CheckBox cb_throbbing;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private CheckBox cb_dull;
 
     private RadioButton rb_headpullYes;
-    private RadioButton rb_headpullNo;
+
 
     private CheckBox cb_standing;
     private CheckBox cb_coughing;
@@ -55,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         cb_inter = findViewById(R.id.intermittent_checkBox);
         cb_dull = findViewById(R.id.dull_checkBox);
         rb_headpullYes = findViewById(R.id.yes_radio_button5);
-        rb_headpullNo = findViewById(R.id.no_radio_button5);
         cb_standing = findViewById(R.id.standing_checkBox);
         cb_coughing = findViewById(R.id.coughing_checkBox);
         cb_shakin = findViewById(R.id.shakinghead_checkBox);
@@ -76,18 +76,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     //The following is processed when the submit button is pressed on the app screen.
     public void submitQuiz(View view) {
 
-        String value = et_editText.getText().toString();
-        int desiredValue = Integer.parseInt(value);
-        if (desiredValue <= 3) {
-            score += 10;
+      //  String value = et_editText.getText().toString();
+      //  int desiredValue = Integer.parseInt(value);
+      //  if (desiredValue <= 3) {
+       //     score += 10;
 
-        } else {
-            score = 300;
+      //  } else {
+       //     score = 300;
 
-        }
+       // }
 
 
         //*** The next step answers question #3
@@ -136,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
     // This calculates the score and interprets it in a Toast message
     private void scoreToastMessage(int score) {
-        if (score >= 1 && score <= 20) {
+        if (score >= 0 && score <= 20) {
             //show a message for a score up to 20
             Toast scoreMessage = Toast.makeText(getApplicationContext(), "" + getString(R.string.level_1_message) + "" + score, Toast.LENGTH_LONG);
             scoreMessage.show();
@@ -164,25 +166,46 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void clearAnswer(View view){
+        RadioGroup rgrpMapType =  findViewById(R.id.maptype);
+        int selectedTypeId = rgrpMapType.getCheckedRadioButtonId();
+        RadioButton rbMapType = ( findViewById(selectedTypeId));
+        if(rbMapType != null) // This will be null if none of the radio buttons are selected
+            rgrpMapType.clearCheck();
+
+
+        RadioGroup rgrpMapType1 =  findViewById(R.id.maptype1);
+        int selectedTypeId1 = rgrpMapType1.getCheckedRadioButtonId();
+        RadioButton rbMapType1 =  findViewById(selectedTypeId1);
+        if(rbMapType1 != null) // This will be null if none of the radio buttons are selected
+            rgrpMapType1.clearCheck();
+
+        RadioGroup rgrpMapType2 =  findViewById(R.id.maptype2);
+        int selectedTypeId2 = rgrpMapType2.getCheckedRadioButtonId();
+        RadioButton rbMapType2 = findViewById(selectedTypeId2);
+        if(rbMapType2 != null) // This will be null if none of the radio buttons are selected
+            rgrpMapType2.clearCheck();
+
+        RadioGroup rgrpMapType3 =  findViewById(R.id.maptype3);
+        int selectedTypeId3 = rgrpMapType3.getCheckedRadioButtonId();
+        RadioButton rbMapType3 =  findViewById(selectedTypeId3);
+        if(rbMapType3 != null) // This will be null if none of the radio buttons are selected
+            rgrpMapType3.clearCheck();
+
+        RadioGroup rgrpMapType4 =  findViewById(R.id.maptype4);
+        int selectedTypeId4 = rgrpMapType4.getCheckedRadioButtonId();
+        RadioButton rbMapType4 = (findViewById(selectedTypeId4));
+        if(rbMapType4 != null) // This will be null if none of the radio buttons are selected
+            rgrpMapType4.clearCheck();
+
         score = 0;
         et_editText.getText().clear();
-        rb_sensitiveYes.setChecked(false);
-        //rb_sensitiveNo.setChecked(false);
-        rb_painYes.setChecked(false);
-        //rb_painNo.setChecked(false);
         cb_stabbing.setChecked(false);
         cb_throbbing.setChecked(false);
         cb_inter.setChecked(false);
         cb_dull.setChecked(false);
-        rb_headpullYes.setChecked(false);
-        rb_headpullNo.setChecked(false);
         cb_standing.setChecked(false);
         cb_coughing.setChecked(false);
         cb_shakin.setChecked(false);
-      rb_nauseatedYes.setChecked(false);
-        rb_q8_a_view.setChecked(false);
-        rb_q8_b_view.setChecked(false);
-        rb_q8_c_view.setChecked(false);
-        rb_q8_d_view.setChecked(false);
+
     }
 }

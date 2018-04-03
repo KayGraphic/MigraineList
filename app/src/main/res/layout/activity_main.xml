@@ -50,7 +50,9 @@
             android:text="@string/q1" />
 
 
-        <RadioGroup style="@style/RadioGroupStyle">
+        <RadioGroup
+            android:id="@+id/maptype1"
+            style="@style/RadioGroupStyle">
 
             <RadioButton
                 android:id="@+id/yes_radio_button1"
@@ -79,7 +81,9 @@
             android:text="@string/q3" />
 
         <!-- Question 3-->
-        <RadioGroup style="@style/RadioGroupStyle">
+        <RadioGroup
+            android:id="@+id/maptype"
+            style="@style/RadioGroupStyle">
 
             <RadioButton
                 android:id="@+id/yes_radio_button3"
@@ -135,7 +139,9 @@
             android:layout_height="wrap_content"
             android:text="@string/q5" />
 
-        <RadioGroup style="@style/RadioGroupStyle">
+        <RadioGroup
+            android:id="@+id/maptype2"
+            style=  "@style/RadioGroupStyle">
 
             <RadioButton
                 android:id="@+id/yes_radio_button5"
@@ -187,7 +193,9 @@
             android:layout_height="wrap_content"
             android:text="@string/q7" />
 
-        <RadioGroup style="@style/RadioGroupStyle">
+        <RadioGroup
+            android:id="@+id/maptype3"
+            style="@style/RadioGroupStyle">
 
             <RadioButton
                 android:id="@+id/yes_radio_button7"
@@ -212,7 +220,9 @@
             android:text="@string/q8" />
 
 
-        <RadioGroup style="@style/RadioGroupStyle">
+        <RadioGroup
+            android:id="@+id/maptype4"
+            style="@style/RadioGroupStyle">
 
             <RadioButton
                 android:id="@+id/rb_q8_a"
@@ -235,14 +245,31 @@
                 android:text="@string/q8nothing" />
         </RadioGroup>
 
-        <Button
-            android:id="@+id/submit_quiz"
-            style="@style/SubmitButtonStyle"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/Buttons"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:onClick="submitQuiz"
-            android:text="@string/submitButton" />
+
+            android:layout_marginBottom="@dimen/twenty_six_dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/submit_quiz"
+                style="@style/SubmitButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitQuiz"
+                android:text="@string/submitButton" />
+
+            <Button
+                android:id="@+id/clearAnswer"
+                style="@style/SubmitButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="clearAnswer"
+                android:text="@string/clearAnswer" />
+        </LinearLayout>
 
     </LinearLayout>
 

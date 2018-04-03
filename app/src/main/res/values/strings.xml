@@ -43,5 +43,6 @@
 
     <!-- The string for submit button-->
     <string name="submitButton">Submit</string>
+    <string name="clearAnswer">Clear</string>
 
 </resources>
