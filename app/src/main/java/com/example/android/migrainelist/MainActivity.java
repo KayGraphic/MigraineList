@@ -160,7 +160,7 @@ String et_editText = find_et_editText.getText().toString();
             //show a message for a score of greater than or equal to 50 and less than or equal to 70
             Toast scoreMessage = Toast.makeText(getApplicationContext(), "" + getString(R.string.level_3_message) + "" + score, Toast.LENGTH_LONG);
             scoreMessage.show();
-        } else if (score >= 71 && score <= 100) {
+        } else if (score >= 71 && score <= 200) {
             //show a message for a score of greater than or equal to 50 and less than or equal to 70
             Toast scoreMessage = Toast.makeText(getApplicationContext(), "" + getString(R.string.level_4_message) + "" + score, Toast.LENGTH_LONG);
             scoreMessage.show();
