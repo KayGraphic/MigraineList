@@ -2,6 +2,7 @@ package com.example.android.migrainelist;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -81,15 +82,21 @@ public class MainActivity extends AppCompatActivity {
     //The following is processed when the submit button is pressed on the app screen.
     public void submitQuiz(View view) {
 
-      //  String value = et_editText.getText().toString();
-      //  int desiredValue = Integer.parseInt(value);
-      //  if (desiredValue <= 3) {
-       //     score += 10;
 
-      //  } else {
-       //     score = 300;
+EditText find_et_editText = findViewById(R.id.et_editText);
+String et_editText = find_et_editText.getText().toString();
 
-       // }
+        if(TextUtils.isEmpty(et_editText)) {
+            find_et_editText.setError("Enter 0-9");
+            return;}
+        int desiredValue =Integer.parseInt(et_editText);
+        if (desiredValue <= 3) {
+            score += 10;
+        }else {
+            score = 300;
+
+        }
+
 
 
         //*** The next step answers question #3
@@ -126,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
         if (rb_q8_c_view.isChecked() || rb_q8_d_view.isChecked()) {
             score += 2;
         } else if (rb_q8_a_view.isChecked() || (rb_q8_b_view.isChecked())) {
-            score += 10;
+            score += 30;
         }
 
 
