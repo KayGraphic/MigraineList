@@ -93,16 +93,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        //*** The next step answers question #3
+        // The next step answers question #3
         if (rb_sensitiveYes.isChecked()) {
             score = score + 10;
         }
-        //*** The next step answers question #4
+        // The next step answers question #4
 
         if (rb_painYes.isChecked()) {
             score = score + 10;
         }
-        //*** The next step answers question #5
+        //The next step answers question #5
 
         if (cb_stabbing.isChecked() && cb_throbbing.isChecked() && !cb_dull.isChecked() && !cb_inter.isChecked()) {
             score = score + 20;
@@ -112,18 +112,18 @@ public class MainActivity extends AppCompatActivity {
             score = score + 10;
         }
 
-        //*** The next step answers question #7
+        // The next step answers question #7
         if (cb_standing.isChecked() && cb_coughing.isChecked()) {
             score += 10;
         } else if (cb_coughing.isChecked() || cb_standing.isChecked() || cb_shakin.isChecked()) {
             score += 5;
         }
-        //*** The next step answers question #8
+        // The next step answers question #8
         if (rb_nauseatedYes.isChecked()) {
             score += 10;
         }
 
-        //*** The next step answers question #9
+        // The next step answers question #9
         if (rb_how_long_1_view.isChecked() || rb_how_long_started_view.isChecked()) {
             score += 2;
         } else if (rb_how_long_woke_up_view.isChecked() || (rb_how_long_3_view.isChecked())) {
