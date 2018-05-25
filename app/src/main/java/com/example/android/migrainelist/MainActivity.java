@@ -1,7 +1,7 @@
 package com.example.android.migrainelist;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.CheckBox;
@@ -18,30 +18,21 @@ public class MainActivity extends AppCompatActivity {
     //  Define the Views
 
     private EditText et_editText;
-
     private RadioButton rb_sensitiveYes;
-
     private RadioButton rb_painYes;
-
-
     private CheckBox cb_stabbing;
     private CheckBox cb_throbbing;
     private CheckBox cb_inter;
     private CheckBox cb_dull;
-
     private RadioButton rb_headpullYes;
-
-
     private CheckBox cb_standing;
     private CheckBox cb_coughing;
     private CheckBox cb_shakin;
-
     private RadioButton rb_nauseatedYes;
-
-    private RadioButton rb_q8_a_view;
-    private RadioButton rb_q8_b_view;
-    private RadioButton rb_q8_c_view;
-    private RadioButton rb_q8_d_view;
+    private RadioButton rb_how_long_woke_up_view;
+    private RadioButton rb_how_long_3_view;
+    private RadioButton rb_how_long_1_view;
+    private RadioButton rb_how_long_started_view;
 
 
     //declare global Variables, assigning views
@@ -49,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         et_editText = findViewById(R.id.et_editText);
         rb_sensitiveYes = findViewById(R.id.yes_radio_button1);
-        //rb_sensitiveNo = findViewById(R.id.no_radio_button1);
         rb_painYes = findViewById(R.id.yes_radio_button3);
-      //  rb_painNo = findViewById(R.id.no_radio_button3);
         cb_stabbing = findViewById(R.id.stabbing_checkBox);
         cb_throbbing = findViewById(R.id.throbbing_checkBox);
         cb_inter = findViewById(R.id.intermittent_checkBox);
@@ -61,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
         cb_coughing = findViewById(R.id.coughing_checkBox);
         cb_shakin = findViewById(R.id.shakinghead_checkBox);
         rb_nauseatedYes = findViewById(R.id.yes_radio_button7);
-        rb_q8_a_view = findViewById(R.id.rb_q8_a);
-        rb_q8_b_view = findViewById(R.id.rb_q8_b);
-        rb_q8_c_view = findViewById(R.id.rb_q8_c);
-        rb_q8_d_view = findViewById(R.id.rb_q8_d);
+        rb_how_long_woke_up_view = findViewById(R.id.rb_how_long_woke_up);
+        rb_how_long_3_view = findViewById(R.id.rb_how_long_3);
+        rb_how_long_1_view = findViewById(R.id.rb_how_long_1);
+        rb_how_long_started_view = findViewById(R.id.rb_how_long_started);
     }
 
 
@@ -77,26 +66,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     //The following is processed when the submit button is pressed on the app screen.
+    // Code created with the help of Stack Overflow question
+   // https://stackoverflow.com/questions/15037465/converting-edittext-to-int-android
+    // Question by user2101454:
+   //https://stackoverflow.com/users/2101454/user2101454
+    // Answer by Jason Sankey:
+    //https://stackoverflow.com/users/2098224/jason-sankey
+    //Access April 10, 2018
     public void submitQuiz(View view) {
 
 
-EditText find_et_editText = findViewById(R.id.et_editText);
-String et_editText = find_et_editText.getText().toString();
+        EditText find_et_editText = findViewById(R.id.et_editText);
+        String et_editText = find_et_editText.getText().toString();
 
-        if(TextUtils.isEmpty(et_editText)) {
+        if (TextUtils.isEmpty(et_editText)) {
             find_et_editText.setError("Enter 0-9");
-            return;}
-        int desiredValue =Integer.parseInt(et_editText);
+            return;
+        }
+        int desiredValue = Integer.parseInt(et_editText);
         if (desiredValue <= 3) {
             score += 10;
-        }else {
+        } else {
             score = 300;
 
         }
-
 
 
         //*** The next step answers question #3
@@ -121,7 +115,7 @@ String et_editText = find_et_editText.getText().toString();
         //*** The next step answers question #7
         if (cb_standing.isChecked() && cb_coughing.isChecked()) {
             score += 10;
-        } else if (cb_coughing.isChecked() || cb_standing.isChecked() ||cb_shakin.isChecked()) {
+        } else if (cb_coughing.isChecked() || cb_standing.isChecked() || cb_shakin.isChecked()) {
             score += 5;
         }
         //*** The next step answers question #8
@@ -130,9 +124,9 @@ String et_editText = find_et_editText.getText().toString();
         }
 
         //*** The next step answers question #9
-        if (rb_q8_c_view.isChecked() || rb_q8_d_view.isChecked()) {
+        if (rb_how_long_1_view.isChecked() || rb_how_long_started_view.isChecked()) {
             score += 2;
-        } else if (rb_q8_a_view.isChecked() || (rb_q8_b_view.isChecked())) {
+        } else if (rb_how_long_woke_up_view.isChecked() || (rb_how_long_3_view.isChecked())) {
             score += 30;
         }
 
@@ -144,6 +138,14 @@ String et_editText = find_et_editText.getText().toString();
 
 
     // This calculates the score and interprets it in a Toast message
+    // Code created with the help of Stack Overflow question
+    // https://stackoverflow.com/questions/3500197/how-to-display-toast-in-android/3504538
+    // Question by Lost in OWL:
+    // https://stackoverflow.com/users/401025/lost-in-owl
+    // Answer by: Aniket Thakur
+    //https://stackoverflow.com/users/2396539/aniket-thakur
+    //Access April 10, 2018
+
     private void scoreToastMessage(int score) {
         if (score >= 0 && score <= 20) {
             //show a message for a score up to 20
@@ -172,36 +174,40 @@ String et_editText = find_et_editText.getText().toString();
 
         }
     }
-    public void clearAnswer(View view){
-        RadioGroup rgrpMapType =  findViewById(R.id.maptype);
+    //code created with help from Codota Website
+    //https://www.codota.com/code/java/methods/android.widget.RadioGroup/getCheckedRadioButtonId
+    //accessed April 12, 2018
+    //Method to clear radio Buttons
+    public void clearAnswer(View view) {
+        RadioGroup rgrpMapType = findViewById(R.id.maptype);
         int selectedTypeId = rgrpMapType.getCheckedRadioButtonId();
-        RadioButton rbMapType = ( findViewById(selectedTypeId));
-        if(rbMapType != null) // This will be null if none of the radio buttons are selected
+        RadioButton rbMapType = (findViewById(selectedTypeId));
+        if (rbMapType != null)
             rgrpMapType.clearCheck();
 
 
-        RadioGroup rgrpMapType1 =  findViewById(R.id.maptype1);
+        RadioGroup rgrpMapType1 = findViewById(R.id.maptype1);
         int selectedTypeId1 = rgrpMapType1.getCheckedRadioButtonId();
-        RadioButton rbMapType1 =  findViewById(selectedTypeId1);
-        if(rbMapType1 != null) // This will be null if none of the radio buttons are selected
+        RadioButton rbMapType1 = findViewById(selectedTypeId1);
+        if (rbMapType1 != null)
             rgrpMapType1.clearCheck();
 
-        RadioGroup rgrpMapType2 =  findViewById(R.id.maptype2);
+        RadioGroup rgrpMapType2 = findViewById(R.id.maptype2);
         int selectedTypeId2 = rgrpMapType2.getCheckedRadioButtonId();
         RadioButton rbMapType2 = findViewById(selectedTypeId2);
-        if(rbMapType2 != null) // This will be null if none of the radio buttons are selected
+        if (rbMapType2 != null)
             rgrpMapType2.clearCheck();
 
-        RadioGroup rgrpMapType3 =  findViewById(R.id.maptype3);
+        RadioGroup rgrpMapType3 = findViewById(R.id.maptype3);
         int selectedTypeId3 = rgrpMapType3.getCheckedRadioButtonId();
-        RadioButton rbMapType3 =  findViewById(selectedTypeId3);
-        if(rbMapType3 != null) // This will be null if none of the radio buttons are selected
+        RadioButton rbMapType3 = findViewById(selectedTypeId3);
+        if (rbMapType3 != null)
             rgrpMapType3.clearCheck();
 
-        RadioGroup rgrpMapType4 =  findViewById(R.id.maptype4);
+        RadioGroup rgrpMapType4 = findViewById(R.id.maptype4);
         int selectedTypeId4 = rgrpMapType4.getCheckedRadioButtonId();
         RadioButton rbMapType4 = (findViewById(selectedTypeId4));
-        if(rbMapType4 != null) // This will be null if none of the radio buttons are selected
+        if (rbMapType4 != null)
             rgrpMapType4.clearCheck();
 
         score = 0;

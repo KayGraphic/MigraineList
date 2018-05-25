@@ -8,7 +8,7 @@
     >
 
     <LinearLayout
-        android:id="@+id/thing"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -225,22 +225,22 @@
             style="@style/RadioGroupStyle">
 
             <RadioButton
-                android:id="@+id/rb_q8_a"
+                android:id="@+id/rb_how_long_woke_up"
                 style="@style/RadioBtnCheckBxStyle"
                 android:text="@string/q8ibuprofen" />
 
             <RadioButton
-                android:id="@+id/rb_q8_b"
+                android:id="@+id/rb_how_long_3"
                 style="@style/RadioBtnCheckBxStyle"
                 android:text="@string/q8coffee" />
 
             <RadioButton
-                android:id="@+id/rb_q8_c"
+                android:id="@+id/rb_how_long_1"
                 style="@style/RadioBtnCheckBxStyle"
                 android:text="@string/q8headachepowder" />
 
             <RadioButton
-                android:id="@+id/rb_q8_d"
+                android:id="@+id/rb_how_long_started"
                 style="@style/RadioBtnCheckBxStyle"
                 android:text="@string/q8nothing" />
         </RadioGroup>
